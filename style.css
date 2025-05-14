@@ -1,0 +1,181 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f0f8ff;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #ff6f00;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #000428, #004e92);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.typing-line {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.typed {
+  color: #ffd600;
+  border-right: 2px solid;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #ffd600; }
+}
+
+.tagline {
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 15px;
+  background: #ff6f00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Collapsible Sections */
+.collapsible-section {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.collapsible-header {
+  font-size: 1.5rem;
+  background: #ff6f00;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  padding-left: 10px;
+}
+
+.section-content.open {
+  max-height: 1000px; /* large enough */
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* Fade in for lines inside content */
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin: 8px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.fade-in-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Colors for paragraphs inside sections */
+.collapsible-section .section-content p.fade-in-text.visible:nth-child(1) { color: #e91e63; }  /* pink */
+.collapsible-section .section-content p.fade-in-text.visible:nth-child(2) { color: #3f51b5; }  /* indigo */
+.collapsible-section .section-content p.fade-in-text.visible:nth-child(3) { color: #4caf50; }  /* green */
+.collapsible-section .section-content p.fade-in-text.visible:nth-child(4) { color: #ff9800; }  /* orange */
+.collapsible-section .section-content p.fade-in-text.visible:nth-child(5) { color: #009688; }  /* teal */
+.collapsible-section .section-content p.fade-in-text.visible:nth-child(6) { color: #673ab7; }  /* deep purple */
+
+/* Skill labels colorful */
+.collapsible-section .section-content .skill.fade-in-text.visible:nth-child(2) label { color: #e91e63; }
+.collapsible-section .section-content .skill.fade-in-text.visible:nth-child(3) label { color: #3f51b5; }
+.collapsible-section .section-content .skill.fade-in-text.visible:nth-child(4) label { color: #4caf50; }
+
+/* Skill bars */
+.skill-bar {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.skill-level {
+  background: linear-gradient(90deg, #ff6f00, #ffca28);
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+  transition: width 1s ease;
+}
+
+/* Footer */
+footer {
+  background: #ff6f00;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Dark mode */
+.dark {
+  background: #121212;
+  color: #eee;
+}
+
+.dark header, .dark footer {
+  background: #000;
+}
+
+.dark a {
+  color: #ffb74d;
+}
